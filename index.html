@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delta Echo Group</title>
+    <meta name="description" content="Delta Echo Group — a private holding company with interests in aviation, investment management, and real estate. Headquartered in Boca Raton, Florida.">
+    <meta name="keywords" content="Delta Echo Group, holding company, aviation, investment, Boca Raton, Florida">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://delta-echo-group.com/">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://delta-echo-group.com/">
+    <meta property="og:title" content="Delta Echo Group">
+    <meta property="og:description" content="A private holding company with interests in aviation, investment management, and real estate.">
+    <meta property="og:site_name" content="Delta Echo Group">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Delta Echo Group">
+    <meta name="twitter:description" content="A private holding company with interests in aviation, investment management, and real estate.">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Delta Echo Group",
+      "description": "A private holding company with interests in aviation, investment management, and real estate.",
+      "url": "https://delta-echo-group.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Boca Raton",
+        "addressRegion": "FL",
+        "addressCountry": "US"
+      }
+    }
+    </script>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --ink: #0f1923;
+            --steel: #1e2d3d;
+            --slate: #3d4f63;
+            --silver: #8896a8;
+            --mist: #e8ecf1;
+            --white: #ffffff;
+            --gold: #b89b5e;
+        }
+        
+        * { box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            background: var(--ink);
+            color: var(--mist);
+            margin: 0;
+            line-height: 1.6;
+        }
+        
+        .serif { font-family: 'Playfair Display', Georgia, serif; }
+        
+        /* Hero gradient */
+        .hero-bg {
+            background: linear-gradient(135deg, #0f1923 0%, #1a2a3a 40%, #0f1923 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: 
+                radial-gradient(ellipse at 20% 50%, rgba(184, 155, 94, 0.06) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 30%, rgba(61, 79, 99, 0.15) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        
+        /* Subtle grid pattern */
+        .grid-pattern {
+            background-image: 
+                linear-gradient(rgba(136, 150, 168, 0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(136, 150, 168, 0.04) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+        
+        /* Animation */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .fade-up { animation: fadeUp 1s ease-out forwards; }
+        .fade-up-delay-1 { animation: fadeUp 1s ease-out 0.2s forwards; opacity: 0; }
+        .fade-up-delay-2 { animation: fadeUp 1s ease-out 0.4s forwards; opacity: 0; }
+        .fade-up-delay-3 { animation: fadeUp 1s ease-out 0.6s forwards; opacity: 0; }
+        
+        /* Gold line */
+        .gold-line {
+            width: 60px;
+            height: 2px;
+            background: var(--gold);
+            margin: 1.5rem 0;
+        }
+        
+        /* Card hover */
+        .entity-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(136, 150, 168, 0.15);
+        }
+        
+        .entity-card:hover {
+            border-color: rgba(184, 155, 94, 0.4);
+            transform: translateY(-4px);
+            background: rgba(30, 45, 61, 0.5);
+        }
+        
+        /* Nav blur */
+        .nav-blur {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            background: rgba(15, 25, 35, 0.7);
+        }
+        
+        @media (prefers-reduced-motion: reduce) {
+            .fade-up, .fade-up-delay-1, .fade-up-delay-2, .fade-up-delay-3 {
+                animation: none;
+                opacity: 1;
+            }
+            .entity-card { transition: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 nav-blur border-b border-white/5">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3">
+                <span class="serif text-xl font-semibold tracking-wide text-white">Delta Echo Group</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8 text-sm text-slate-300">
+                <a href="#about" class="hover:text-white transition-colors">About</a>
+                <a href="#portfolio" class="hover:text-white transition-colors">Portfolio</a>
+                <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero-bg grid-pattern min-h-screen flex items-center relative">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8 relative z-10 pt-16">
+            <div class="max-w-3xl">
+                <p class="fade-up text-sm uppercase tracking-[0.3em] text-slate-400 mb-6">Boca Raton, Florida</p>
+                <h1 class="fade-up-delay-1 serif text-5xl md:text-7xl font-medium leading-[1.1] text-white mb-2">
+                    Delta Echo Group
+                </h1>
+                <div class="fade-up-delay-2 gold-line"></div>
+                <p class="fade-up-delay-2 text-xl md:text-2xl text-slate-300 font-light leading-relaxed max-w-2xl">
+                    A private holding company with interests in<br class="hidden md:block">
+                    aviation, investment management, and real estate.
+                </p>
+                <div class="fade-up-delay-3 mt-12 flex flex-wrap gap-4">
+                    <a href="#portfolio" class="px-8 py-3 border border-slate-500/40 text-slate-200 hover:border-gold hover:text-white transition-all duration-300 text-sm tracking-wide">
+                        View Portfolio
+                    </a>
+                    <a href="#contact" class="px-8 py-3 text-slate-400 hover:text-white transition-colors text-sm tracking-wide">
+                        Get in Touch →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-24 md:py-32 border-t border-white/5">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-16 items-start">
+                <div>
+                    <p class="text-sm uppercase tracking-[0.2em] text-slate-500 mb-4">Overview</p>
+                    <h2 class="serif text-3xl md:text-4xl font-medium text-white mb-6 leading-tight">
+                        Built on precision,<br>managed with discipline.
+                    </h2>
+                    <div class="gold-line"></div>
+                </div>
+                <div class="space-y-5 text-slate-300 leading-relaxed">
+                    <p>
+                        Delta Echo Group is the umbrella for a portfolio of operating businesses and investment vehicles founded by Daniel Eisner. Headquartered in South Florida, the group brings an operator's mindset to every asset class it enters — from twin-engine aviation to quantitative trading.
+                    </p>
+                    <p>
+                        Each entity under the group operates independently with its own balance sheet, governance, and objectives. The holding structure provides strategic direction, shared infrastructure, and capital allocation oversight — without bureaucracy.
+                    </p>
+                    <p class="text-slate-400">
+                        We don't chase trends. We acquire capability, build durable operations, and let compounding do the work.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="py-24 md:py-32 border-t border-white/5 bg-[#0c1620]">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+            <div class="mb-16">
+                <p class="text-sm uppercase tracking-[0.2em] text-slate-500 mb-4">Portfolio</p>
+                <h2 class="serif text-3xl md:text-4xl font-medium text-white">Operating Entities</h2>
+                <div class="gold-line"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                
+                <!-- Aviation -->
+                <div class="entity-card p-8 rounded-sm">
+                    <div class="flex items-start justify-between mb-4">
+                        <div>
+                            <h3 class="serif text-2xl font-medium text-white mb-1">Delta Echo Aviation</h3>
+                            <p class="text-xs uppercase tracking-wider text-slate-500">Aircraft Operations &amp; Leasing</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-400 leading-relaxed">
+                        Operates and leases general aviation aircraft in South Florida. Current fleet includes a 2018 Diamond DA-62 twin-engine aircraft available for dry lease at KLNA (Lantana), serving the Boca Raton and Palm Beach pilot community.
+                    </p>
+                    <a href="https://flyda62.com" class="inline-block mt-5 text-sm text-gold hover:text-white transition-colors">
+                        flyda62.com →
+                    </a>
+                </div>
+                
+                <!-- Ventures -->
+                <div class="entity-card p-8 rounded-sm">
+                    <div class="flex items-start justify-between mb-4">
+                        <div>
+                            <h3 class="serif text-2xl font-medium text-white mb-1">Delta Echo Ventures</h3>
+                            <p class="text-xs uppercase tracking-wider text-slate-500">Investment &amp; Holdings</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-400 leading-relaxed">
+                        A C-corporation serving as the group's primary investment vehicle. Manages capital allocation across public equities, futures, and private opportunities. Houses the group's advisory and research operations.
+                    </p>
+                </div>
+                
+                <!-- Four Robots -->
+                <div class="entity-card p-8 rounded-sm">
+                    <div class="flex items-start justify-between mb-4">
+                        <div>
+                            <h3 class="serif text-2xl font-medium text-white mb-1">Four Robots</h3>
+                            <p class="text-xs uppercase tracking-wider text-slate-500">Trading &amp; Technology</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-400 leading-relaxed">
+                        A partnership focused on systematic trading strategies and applied AI research. Develops proprietary tools for market analysis, signal generation, and automated execution across futures and equity markets.
+                    </p>
+                </div>
+                
+                <!-- Real Estate -->
+                <div class="entity-card p-8 rounded-sm">
+                    <div class="flex items-start justify-between mb-4">
+                        <div>
+                            <h3 class="serif text-2xl font-medium text-white mb-1">Real Estate Holdings</h3>
+                            <p class="text-xs uppercase tracking-wider text-slate-500">Property &amp; Facilities</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-400 leading-relaxed">
+                        Owns and manages residential and commercial property in the South Florida market. Provides facilities infrastructure for the group's operating businesses and investment activities.
+                    </p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership -->
+    <section class="py-24 md:py-32 border-t border-white/5">
+        <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+            <p class="text-sm uppercase tracking-[0.2em] text-slate-500 mb-4">Leadership</p>
+            <h2 class="serif text-3xl md:text-4xl font-medium text-white mb-8">Daniel Eisner</h2>
+            <div class="gold-line mx-auto"></div>
+            <p class="text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto mt-6">
+                Founder and principal. Commercial pilot, instrument-rated multi-engine. Two decades of experience building and operating businesses across aviation, technology, and financial markets.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-24 md:py-32 border-t border-white/5 bg-[#0c1620]">
+        <div class="max-w-3xl mx-auto px-6 lg:px-8 text-center">
+            <p class="text-sm uppercase tracking-[0.2em] text-slate-500 mb-4">Contact</p>
+            <h2 class="serif text-3xl md:text-4xl font-medium text-white mb-8">Get in Touch</h2>
+            <div class="gold-line mx-auto"></div>
+            <p class="text-slate-400 mt-6 mb-10">
+                For business inquiries, partnerships, or investment opportunities.
+            </p>
+            <a href="mailto:daniel.eisner@delta-echo-group.com" class="inline-block px-10 py-4 border border-gold/40 text-gold hover:bg-gold hover:text-ink transition-all duration-300 text-sm tracking-[0.1em] uppercase">
+                daniel.eisner@delta-echo-group.com
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/5 py-12">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div>
+                    <p class="serif text-lg text-white">Delta Echo Group</p>
+                    <p class="text-xs text-slate-500 mt-1">Boca Raton, Florida</p>
+                </div>
+                <div class="flex items-center gap-6 text-sm text-slate-500">
+                    <a href="https://flyda62.com" class="hover:text-white transition-colors">flyda62.com</a>
+                    <a href="mailto:daniel.eisner@delta-echo-group.com" class="hover:text-white transition-colors">Email</a>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-white/5 text-center">
+                <p class="text-xs text-slate-600">&copy; 2026 Delta Echo Group. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
